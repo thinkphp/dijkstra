@@ -47,6 +47,7 @@ Get the cost for shortest path.
 
 # Example:
 
+   
   //matrix of roads
   var road = [[1, 2, 1],
              [1, 3, 9],
@@ -58,20 +59,20 @@ Get the cost for shortest path.
              [5, 2, 4],
              [5, 4, 2]], 
 
-      //start node I mean from where you want to go
-      start = 1, 
+       //start node I mean from where you want to go
+       start = 1, 
 
-      //end node I mean where you want to get to, where you want to arrive
-      end = 3;
+       //end node I mean where you want to get to, where you want to arrive
+       end = 3;
 
-//create an object of this class
-var dij = new Dijkstra(start, end, road);
+       //create an object of this class
+       var dij = new Dijkstra(start, end, road);
 
-    //display the cost of the path
-    console.log("Cost = " + dij.getCost() ) 
-    //output -> Cost = 7
+       //display the cost of the path
+       console.log("Cost = " + dij.getCost() ) 
+      //output -> Cost = 7
 
-    //display the shortest path
-    console.log("Shortest path from the node "+ start + " to "+ end + " -> "+ dij.getShortestPath() )
-    //output ->Shortest path from the node 1 to 3 -> 1 2 4 3
+       //display the shortest path
+       console.log("Shortest path from the node "+ start + " to "+ end + " -> "+ dij.getShortestPath() )
+       //output ->Shortest path from the node 1 to 3 -> 1 2 4 3
    
