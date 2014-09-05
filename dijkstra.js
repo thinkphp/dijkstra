@@ -58,7 +58,7 @@ var Dijkstra = function(start_point, end_point, r ){
 
     var matrix = r,
 
-        Road = createMatrix(nodes+1, nodes+1),
+        Road = createMatrix(nodes + 1, nodes + 1),
 
         R = createArray( nodes + 1 ),
 
@@ -68,13 +68,14 @@ var Dijkstra = function(start_point, end_point, r ){
 
         get = function( node ) {
 
-              if(F[node]) get(F[node])
+              if( F[ node ] ) get( F[ node ] )
 
-              output.push(node)
+              output.push( node )
         },
 
         getCost = function() {
-                return (R[end]) 
+
+                return ( R[ end ] ) 
         },
 
         getShortestPath = function() {
