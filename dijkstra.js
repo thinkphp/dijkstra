@@ -119,7 +119,7 @@ var Dijkstra = function(start_point, end_point, r ){
 
                     if( start != i ) 
 
-                        if( R[ i ] < 88) 
+                        if( R[ i ] < PInfinit) 
 
                             F[ i ] = start
                 }
