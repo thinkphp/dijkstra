@@ -6,8 +6,8 @@ shortest path problem for a graph with non-negative edge path costs, producing a
 
 ![Screenshot](http://farm6.staticflickr.com/5572/15142640541_6ea1eb3d48.jpg)
 
-How to use in Mootools Framework
---------------------------------
+How to use
+----------
 
 Include the latest version MooTools Framework, then dijkstra.js into the page:
 
