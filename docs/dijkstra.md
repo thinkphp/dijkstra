@@ -13,12 +13,12 @@ Dijkstra's algorithm, conceived by computer scientist Edsger Dijkstra, is a grap
 - end_point   (Integer) end node 
 - matrix_of_road ((int x int) -> float )(Matrix = Array of Array) - matrix of roads
 
-Dijkstra Method: getShortestPath {#Dijkstra: getShortestPath}
+Dijkstra Method: getCost {#Dijkstra: getCost}
 -------------------------------------------------------------
 
 Get the cost for shortest path.
 
-### Syntax: dij.getCost();
+### Syntax: dij.getShortestPath();
 
 ### Arguments:
 
@@ -26,8 +26,23 @@ Get the cost for shortest path.
 
 ### Returns:
 
-- returns `Integer` a cost from one path
+- returns `Integer` a cost shortest parth.
 
+
+Dijkstra Method: getShortestPath {#Dijkstra: getShortestPath}
+-------------------------------------------------------------
+
+Get the cost for shortest path.
+
+### Syntax: dij.getShortestPath();
+
+### Arguments:
+
+- void
+
+### Returns:
+
+- returns `Array' an array shortest path
 
 
 # Example:
