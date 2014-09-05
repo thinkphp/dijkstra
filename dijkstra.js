@@ -1,11 +1,39 @@
 var Dijkstra = function(start_point, end_point, r ){
 
+    //initialy infinit = 888
+    var PInfinit = 888;
+
+    //this function try to find out the number of nodes from directed graph
+    var nodes = (function( r ) {
+ 
+        var vec = [];
+            for(var i=0;i<r.length;i++) {
+                for(var j=0;j<2;j++) 
+                vec.push(road[i][j]);    
+        }
+
+        function max(a,b){
+                 if(a>b) return a
+                    else return b
+        }
+
+       function maxN( li, ls ) {
+            if(li == ls) 
+                     return vec[ li ]
+            else 
+                m = parseInt((li+ls)/2)
+                return max(maxN(li,m), maxN(m+1,ls));    
+       }
+  
+       return maxN(0, vec.length - 1)
+    })( r )
+
     var start = start_point, 
           end = end_point; 
 
     var output = []; 
 
-    //create a matrix
+    //declare a matrix with n rows and m columns
     var createMatrix = function(rows, columns) {
 
               var mat = new Array( rows );
@@ -30,15 +58,13 @@ var Dijkstra = function(start_point, end_point, r ){
 
     var matrix = r,
 
-        Road = createMatrix(6, 6),
+        Road = createMatrix(nodes+1, nodes+1),
 
-        R = createArray( 6 ),
+        R = createArray( nodes + 1 ),
 
-        F = createArray( 6 ),
+        F = createArray( nodes + 1 ),
 
-        S = createArray( 6 ),
-
-        nodes = 0,
+        S = createArray( nodes + 1 ),
 
         get = function( node ) {
 
@@ -62,12 +88,12 @@ var Dijkstra = function(start_point, end_point, r ){
 
                var n = r.length, x, y, cost;
 
-               for(var i = 1; i <= 5; i++) {
+               for(var i = 1; i <= nodes; i++) {
 
-                       for(var j = 1; j <= 5; j++) {
+                       for(var j = 1; j <= nodes; j++) {
 
                            if(i == j) Road[i][j] = 0; 
-                               else   Road[i][j] = 88; 
+                               else   Road[i][j] = PInfinit; 
                        }
                }
 
@@ -87,7 +113,7 @@ var Dijkstra = function(start_point, end_point, r ){
 
                 S[start] = 1;
                  
-                for(var i = 1; i <= 5; i++) {
+                for(var i = 1; i <= nodes; i++) {
 
                     R[ i ] = Road[ start ][ i ];
 
@@ -99,11 +125,11 @@ var Dijkstra = function(start_point, end_point, r ){
                 }
 
                 //execute n-1 times
-                for(var i=1;i<=5-1;i++) {
+                for(var i=1; i <= nodes-1;i++) {
      
-                    min = 88
+                    min = PInfinit
 
-                    for(var k = 1; k <= 5; k++) {
+                    for(var k = 1; k <= nodes; k++) {
 
                         if(S[ k ] == 0) 
 
@@ -118,7 +144,7 @@ var Dijkstra = function(start_point, end_point, r ){
                     //marked the node as selected
                     S[ posMin ] = 1
 
-                    for(var j = 1; j <= 5; j++) {
+                    for(var j = 1; j <= nodes; j++) {
 
                         if(S[j] == 0) 
 
