@@ -2,6 +2,6 @@ name: dijkstra
 author: thinkphp
 current: v1.0
 category: Utilities
-tags: [dijkstra, shortestpath, path, directed, graph, directed_graph]
-docs: 
-demo: 
+tags: [shortestpath, path, directed, graphs, graph, Edsger, Dijkstra]
+docs: https://github.com/thinkphp/dijkstra/blob/master/docs/dijkstra.md
+demo: http://thinkphp.ro/apps/js-hacks/dijkstra/demos/dijkstra.html
