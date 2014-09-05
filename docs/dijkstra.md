@@ -48,16 +48,16 @@ Get the cost for shortest path.
 # Example:
 
    
-  //matrix of roads
-  var road = [[1, 2, 1],
-             [1, 3, 9],
-             [1, 5, 3],
-             [2, 4, 3],
-             [2, 3, 7],
-             [4, 3, 2],
-             [4, 1, 1],
-             [5, 2, 4],
-             [5, 4, 2]], 
+       //matrix of roads
+       var road = [[1, 2, 1],
+                  [1, 3, 9],
+                  [1, 5, 3],
+                  [2, 4, 3],
+                  [2, 3, 7],
+                  [4, 3, 2],
+                  [4, 1, 1],
+                  [5, 2, 4],
+                  [5, 4, 2]], 
 
        //start node I mean from where you want to go
        start = 1, 
