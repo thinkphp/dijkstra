@@ -40,7 +40,7 @@ var Dijkstra = new Class({
 
                               for(var j = 0; j < 2; j++) 
 
-                                  vec.push( road[ i ][ j ] );    
+                                  vec.push( r[ i ][ j ] );    
                           }
 
                       function max(a,b){
