@@ -5,26 +5,31 @@ var Dijkstra = function(start_point, end_point, r ){
 
     //this function try to find out the number of nodes from directed graph
     var nodes = (function( r ) {
- 
+
         var vec = [];
             for(var i=0;i<r.length;i++) {
+
                 for(var j=0;j<2;j++) 
-                vec.push(road[i][j]);    
+
+                vec.push( r[ i ][ j ] );    
         }
 
         function max(a,b){
+
                  if(a>b) return a
+
                     else return b
         }
 
        function maxN( li, ls ) {
+
             if(li == ls) 
                      return vec[ li ]
             else 
                 m = parseInt((li+ls)/2)
                 return max(maxN(li,m), maxN(m+1,ls));    
        }
-  
+          
        return maxN(0, vec.length - 1)
     })( r )
 
