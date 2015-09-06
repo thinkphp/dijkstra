@@ -13,10 +13,6 @@ struct Node {
 
        int y,
            cost;
-       bool operator < (const Node& n) const {
-
-            return cost > n.cost;
-       } 
 };
 
 vector<Node> Graph[ MAXN ];
@@ -101,9 +97,9 @@ void Dijkstra() {
 
                                      auxNode.y = it->y;
 
-                                     auxNode.cost = it->cost;
+                                     auxNode.cost = distMin[ it->y ];
 
-                                     Queue.push(auxNode);
+                                     Queue.push( auxNode );
 
                                      inQueue[ it->y ] = true;  
                                  }                            

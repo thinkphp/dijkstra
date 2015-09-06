@@ -85,8 +85,11 @@ void Dijkstra() {
                                  if(!inQueue[ it->y ]) {
 
                                      auxNode.y = it->y;
-                                     auxNode.cost = it->cost;
+
+                                     auxNode.cost = distMin[ it->y ];
+
                                      Queue.push(auxNode);
+
                                      inQueue[ it->y ] = true;  
                                  }                            
                               }   
