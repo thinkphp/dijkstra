@@ -40,7 +40,6 @@ Sample
     console.log("Shortest path from the node "+ start + " to "+ end + " -> "+ dij.getShortestPath() )
 
 
-
 #### Problem Set
 
 https://infoarena.ro/problema/dijkstra
