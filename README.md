@@ -37,6 +37,10 @@ Sample
 
     console.log("Cost = " + dij.getCost() )
 
+
+#### Problem Set
+
+https://infoarena.ro/problema/dijkstra
     console.log("Shortest path from the node "+ start + " to "+ end + " -> "+ dij.getShortestPath() )
 
 
